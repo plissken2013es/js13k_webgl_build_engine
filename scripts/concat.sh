@@ -20,7 +20,7 @@ cat src/lib/gre-webgl.js
 cd build;
 for glsl in *.frag *.vert; do
   name=`echo $glsl | tr '.' '_' | tr '[:lower:]' '[:upper:]'`
-  cat $glsl | ../scripts/wrapjs.sh $name
+  cat $glsl | bash ../scripts/wrapjs.sh $name
   echo
 done
 cd ..;
