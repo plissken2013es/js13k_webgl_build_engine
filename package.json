@@ -13,8 +13,10 @@
         "build-nominify": "npm run clean && npm run compileglsl && npm run concat && npm run nominify && npm run gen",
         "watch": "npm run build-nominify; wr 'npm run build-nominify' src/ scripts/",
         "liveserver": "mkdir -p target; cd target; live-server --no-browser",
+        "c9server": "mkdir -p target; node server",
         "zip": "cd target; zip -r ../target.zip .; cd ..; wc -c target.zip",
-        "start": "npm run watch & npm run liveserver"
+        "start": "npm run watch & npm run liveserver",
+        "c9start": "npm run watch & npm run c9server"
     },
     "repository": {
         "type": "git",
@@ -33,7 +35,8 @@
         "live-server": "^0.8.1",
         "uglify-js": "^2.4.24",
         "uglifycss": "^0.0.17",
-        "wr": "^1.3.1"
+        "wr": "^1.3.1",
+        "express": "~3.2.4"
     },
     "dependencies": {
     }
